@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_practice/Classes/SliderController.dart';
+import 'package:getx_practice/Controllers/SliderController.dart';
 
 class StateManagementSlider extends StatelessWidget {
   const StateManagementSlider({super.key});

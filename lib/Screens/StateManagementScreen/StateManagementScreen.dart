@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_practice/Classes/CounterClass.dart';
+import 'package:getx_practice/Controllers/CounterClass.dart';
 
 // class  extends StatelessWidget {
 //   const StateManagementScreen({super.key});

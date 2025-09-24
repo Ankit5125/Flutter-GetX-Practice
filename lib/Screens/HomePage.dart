@@ -5,6 +5,7 @@ import 'package:getx_practice/Screens/MediaQueryExample/MediaQueryExample.dart';
 import 'package:getx_practice/Screens/ScreenTwo/ScreenTwo.dart';
 import 'package:getx_practice/Screens/StateManagementScreen/StateManagementScreen.dart';
 import 'package:getx_practice/Screens/StateManagementScreen/StateManagementSlider.dart';
+import 'package:getx_practice/Screens/StateManagementScreen/StateManagementSwitch.dart';
 import 'package:getx_practice/Widgest/ListTileCard.dart';
 
 class HomePage extends StatelessWidget {
@@ -62,9 +63,15 @@ class HomePage extends StatelessWidget {
             },
           ),
           ListTileCard(
-            string: "State Management 2",
+            string: "State Management (Slider)",
             onTap: () {
               Get.to(StateManagementSlider());
+            },
+          ),
+          ListTileCard(
+            string: "State Management (Switch)",
+            onTap: () {
+              Get.to(StateManagementSwitch());
             },
           ),
         ],
