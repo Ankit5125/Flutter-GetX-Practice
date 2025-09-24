@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart' hide Navigator, MediaQuery;
+import 'package:getx_practice/Widgest/Localization.dart';
 import 'package:getx_practice/Widgest/Navigator.dart';
 import 'package:getx_practice/Widgest/DarkTheme.dart';
 import 'package:getx_practice/Widgest/LightTheme.dart';
@@ -19,6 +20,7 @@ class HomePage extends StatelessWidget {
           Darktheme(),
           Navigator(),
           MediaQuery(),
+          Localization(),
         ],
       ),
     );

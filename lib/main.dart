@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:getx_practice/Classes/Languages.dart';
 import 'package:getx_practice/Screens/HomePage.dart';
 
 void main() {
@@ -18,6 +19,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightGreenAccent),
       ),
+      locale: Locale("en", "en_US"),
+      // locale: Locale("hi", "hin_IND"),
+      translations: Language(),
       home: HomePage(),
     );
   }
