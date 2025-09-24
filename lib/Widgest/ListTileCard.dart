@@ -10,6 +10,6 @@ class ListTileCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(title: Text(string), onTap: onTap),
-    );
+    ).paddingOnly(top: 5, left: 5, right: 5);
   }
 }
