@@ -5,6 +5,7 @@ import 'package:getx_practice/Widgest/DarkTheme.dart';
 import 'package:getx_practice/Widgest/LightTheme.dart';
 import 'package:getx_practice/Widgest/Snackbar.dart';
 import 'package:getx_practice/Widgest/MediaQuery.dart';
+import 'package:getx_practice/Widgest/StateManagment.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -21,6 +22,7 @@ class HomePage extends StatelessWidget {
           Navigator(),
           MediaQuery(),
           Localization(),
+          StateManagment(),
         ],
       ),
     );
