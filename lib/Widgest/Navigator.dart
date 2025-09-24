@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_practice/Screens/ScreenTwo/ScreenTwo.dart';
 
-class GotoCard extends StatelessWidget {
-  const GotoCard({super.key});
+class Navigator extends StatelessWidget {
+  const Navigator({super.key});
 
   @override
   Widget build(BuildContext context) {
