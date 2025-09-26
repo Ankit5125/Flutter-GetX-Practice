@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_practice/Screens/ImagePicker/ImagePicker.dart';
 import 'package:getx_practice/Screens/LocalizationExample/Localization.dart';
 import 'package:getx_practice/Screens/MediaQueryExample/MediaQueryExample.dart';
 import 'package:getx_practice/Screens/ScreenTwo/ScreenTwo.dart';
@@ -90,6 +91,12 @@ class HomePage extends StatelessWidget {
             string: "State Management (Favourite)",
             onTap: () {
               Get.to(StateManagementFavourite());
+            },
+          ),
+          ListTileCard(
+            string: "Image Picker",
+            onTap: () {
+              Get.to(ImagePickerScreen());
             },
           ),
         ],
