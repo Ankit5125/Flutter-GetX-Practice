@@ -1,8 +1,9 @@
-import 'package:flutter/material.dart' hide Navigator, MediaQuery;
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_practice/Screens/LocalizationExample/Localization.dart';
 import 'package:getx_practice/Screens/MediaQueryExample/MediaQueryExample.dart';
 import 'package:getx_practice/Screens/ScreenTwo/ScreenTwo.dart';
+import 'package:getx_practice/Screens/StateManagementScreen/StateManagementFavourite.dart';
 import 'package:getx_practice/Screens/StateManagementScreen/StateManagementScreen.dart';
 import 'package:getx_practice/Screens/StateManagementScreen/StateManagementSlider.dart';
 import 'package:getx_practice/Screens/StateManagementScreen/StateManagementSwitch.dart';
@@ -28,13 +29,24 @@ class HomePage extends StatelessWidget {
           ),
           ListTileCard(
             onTap: () {
-              Get.changeTheme(ThemeData.light());
+              Get.changeTheme(
+                ThemeData.from(
+                  colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+                ),
+              );
             },
             string: "Light Theme",
           ),
           ListTileCard(
             onTap: () {
-              Get.changeTheme(ThemeData.dark());
+              Get.changeTheme(
+                ThemeData.from(
+                  colorScheme: ColorScheme.fromSeed(
+                    brightness: Brightness.dark,
+                    seedColor: Colors.green,
+                  ),
+                ),
+              );
             },
             string: "Dark Theme",
           ),
@@ -72,6 +84,12 @@ class HomePage extends StatelessWidget {
             string: "State Management (Switch)",
             onTap: () {
               Get.to(StateManagementSwitch());
+            },
+          ),
+          ListTileCard(
+            string: "State Management (Favourite)",
+            onTap: () {
+              Get.to(StateManagementFavourite());
             },
           ),
         ],
