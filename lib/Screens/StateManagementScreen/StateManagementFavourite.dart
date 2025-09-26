@@ -11,33 +11,25 @@ class StateManagementFavourite extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("State Management (Favourite)")),
-      body: Obx(() {
-        final favs = controller.favourite; // <- accessing the RxList inside Obx
-        return ListView.builder(
-          itemCount: controller.fruits.length,
-          itemBuilder: (_, index) {
-            final fruit = controller.fruits[index];
-            final isFavourite = favs.contains(fruit); // now reactive!
-
-            return Card(
-              child: ListTile(
-                title: Text(fruit),
-                trailing: IconButton(
-                  icon: Icon(
-                    isFavourite ? Icons.favorite : Icons.favorite_border,
-                    color: isFavourite ? Colors.red : null,
-                  ),
-                  onPressed: () {
-                    controller.toggleFavourite(fruit);
-                    debugPrint("All Fruits: ${controller.fruits}");
-                    debugPrint("Favourites: ${controller.favourite}");
-                  },
+      body: ListView.builder(
+        itemCount: controller.fruits.length,
+        itemBuilder: (_, index) {
+          return Card(
+            child: ListTile(
+              title: Text(controller.fruits[index]),
+              trailing: Obx(
+                () => Icon(
+                  controller.favourite.contains(controller.fruits[index])
+                      ? Icons.favorite
+                      : null,
+                  color: Colors.redAccent,
                 ),
               ),
-            );
-          },
-        );
-      }),
+              onTap: () => controller.toggleFavourite(controller.fruits[index]),
+            ),
+          );
+        },
+      ),
     );
   }
 }
